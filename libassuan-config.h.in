@@ -1,0 +1,262 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+
+#ifndef _ASSUAN_CONFIG_H_INCLUDED
+#define _ASSUAN_CONFIG_H_INCLUDED
+
+/* Enable gpg-error's strerror macro under W32CE.  */
+#define GPG_ERR_ENABLE_ERRNO_MACROS 1
+
+/* Provide the es_ macro for estream.  */
+#define GPGRT_ENABLE_ES_MACROS 1
+
+
+
+/* GIT commit id revision used to build this package */
+#cmakedefine BUILD_REVISION @BUILD_REVISION@
+
+/* The time this package was configured for a build */
+#cmakedefine BUILD_TIMESTAMP @BUILD_TIMESTAMP@
+
+/* Define to 1 if you have the declaration of `sys_siglist', and to 0 if you
+   don't. */
+#cmakedefine01 HAVE_DECL_SYS_SIGLIST
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#cmakedefine HAVE_DLFCN_H @HAVE_DLFCN_H@
+
+/* Defined if we run on some of the PCDOS like systems (DOS, Windoze. OS/2)
+   with special properties like no file modes */
+#cmakedefine HAVE_DOSISH_SYSTEM @HAVE_DOSISH_SYSTEM@
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#cmakedefine HAVE_FCNTL_H @HAVE_FCNTL_H@
+
+/* Define to 1 if you have the `flockfile' function. */
+#cmakedefine HAVE_FLOCKFILE @HAVE_FLOCKFILE@
+
+/* Define to 1 if you have the `fopencookie' function. */
+#cmakedefine HAVE_FOPENCOOKIE @HAVE_FOPENCOOKIE@
+
+/* Define to 1 if you have the `funlockfile' function. */
+#cmakedefine HAVE_FUNLOCKFILE @HAVE_FUNLOCKFILE@
+
+/* Define to 1 if you have the `funopen' function. */
+#cmakedefine HAVE_FUNOPEN @HAVE_FUNOPEN@
+
+/* Define to 1 if you have the `getaddrinfo' function. */
+#cmakedefine HAVE_GETADDRINFO @HAVE_GETADDRINFO@
+
+/* Define to 1 if you have the `getpeereid' function. */
+#cmakedefine HAVE_GETPEEREID @HAVE_GETPEEREID@
+
+/* Define to 1 if you have the `getpeerucred' function. */
+#cmakedefine HAVE_GETPEERUCRED @HAVE_GETPEERUCRED@
+
+/* Define to 1 if you have the `getrlimit' function. */
+#cmakedefine HAVE_GETRLIMIT @HAVE_GETRLIMIT@
+
+/* Define to 1 if you have `inet_pton'. */
+#cmakedefine HAVE_INET_PTON @HAVE_INET_PTON@
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H @HAVE_INTTYPES_H@
+
+/* Define to 1 if you have the `isascii' function. */
+#cmakedefine HAVE_ISASCII @HAVE_ISASCII@
+
+/* Define to 1 if you have the <locale.h> header file. */
+#cmakedefine HAVE_LOCALE_H @HAVE_LOCALE_H@
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H @HAVE_MEMORY_H@
+
+/* Define to 1 if you have the `memrchr' function. */
+#cmakedefine HAVE_MEMRCHR @HAVE_MEMRCHR@
+
+/* Define to 1 if you have the `nanosleep' function in libc. */
+#cmakedefine HAVE_NANOSLEEP @HAVE_NANOSLEEP@
+
+/* Define to 1 if you have the `putc_unlocked' function. */
+#cmakedefine HAVE_PUTC_UNLOCKED @HAVE_PUTC_UNLOCKED@
+
+/* Define to 1 if you have the `setenv' function. */
+#cmakedefine HAVE_SETENV @HAVE_SETENV@
+
+/* Define to 1 if you have the `stat' function. */
+#cmakedefine HAVE_STAT @HAVE_STAT@
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H @HAVE_STDINT_H@
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H @HAVE_STDLIB_H@
+
+/* Define to 1 if you have the `stpcpy' function. */
+#cmakedefine HAVE_STPCPY @HAVE_STPCPY@
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H @HAVE_STRINGS_H@
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H @HAVE_STRING_H@
+
+/* Define if struct sockpeercred contains the pid member. */
+#cmakedefine HAVE_STRUCT_SOCKPEERCRED_PID @HAVE_STRUCT_SOCKPEERCRED_PID@
+
+/* Define to 1 if you have the <sys/select.h> header file. */
+#cmakedefine HAVE_SYS_SELECT_H @HAVE_SYS_SELECT_H@
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#cmakedefine HAVE_SYS_SOCKET_H @HAVE_SYS_SOCKET_H@
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H @HAVE_SYS_STAT_H@
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#cmakedefine HAVE_SYS_TIME_H @HAVE_SYS_TIME_H@
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H @HAVE_SYS_TYPES_H@
+
+/* Define to 1 if you have the <sys/ucred.h> header file. */
+#cmakedefine HAVE_SYS_UCRED_H @HAVE_SYS_UCRED_H@
+
+/* Define to 1 if you have the <sys/uio.h> header file. */
+#cmakedefine HAVE_SYS_UIO_H @HAVE_SYS_UIO_H@
+
+/* Define to 1 if you have the <ucred.h> header file. */
+#cmakedefine HAVE_UCRED_H @HAVE_UCRED_H@
+
+/* Define to 1 if the system has the type `uintptr_t'. */
+#cmakedefine HAVE_UINTPTR_T @HAVE_UINTPTR_T@
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H @HAVE_UNISTD_H@
+
+/* Defined if we run on WindowsCE */
+#cmakedefine HAVE_W32CE_SYSTEM @HAVE_W32CE_SYSTEM@
+
+/* Defined if we run on a W32 API based system */
+#cmakedefine HAVE_W32_SYSTEM @HAVE_W32_SYSTEM@
+
+/* Defined if we run on a 64 bit W32 API based system */
+#cmakedefine HAVE_W64_SYSTEM @HAVE_W64_SYSTEM@
+
+/* Define to 1 if you have the <winsock2.h> header file. */
+#cmakedefine HAVE_WINSOCK2_H @HAVE_WINSOCK2_H@
+
+/* Define to 1 if you have the <ws2tcpip.h> header file. */
+#cmakedefine HAVE_WS2TCPIP_H @HAVE_WS2TCPIP_H@
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#cmakedefine LT_OBJDIR @LT_OBJDIR@
+
+/* Name of package */
+#cmakedefine PACKAGE @PACKAGE@
+
+/* Define to the address where bug reports for this package should be sent. */
+#cmakedefine PACKAGE_BUGREPORT @PACKAGE_BUGREPORT@
+
+/* Define to the full name of this package. */
+#cmakedefine PACKAGE_NAME @PACKAGE_NAME@
+
+/* Define to the full name and version of this package. */
+#cmakedefine PACKAGE_STRING @PACKAGE_STRING@
+
+/* Define to the one symbol short name of this package. */
+#cmakedefine PACKAGE_TARNAME @PACKAGE_TARNAME@
+
+/* Define to the home page for this package. */
+#cmakedefine PACKAGE_URL @PACKAGE_URL@
+
+/* Define to the version of this package. */
+#cmakedefine PACKAGE_VERSION @PACKAGE_VERSION@
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#cmakedefine RETSIGTYPE @RETSIGTYPE@
+
+/* Define to 1 if you have the ANSI C header files. */
+#cmakedefine STDC_HEADERS @STDC_HEADERS@
+
+/* Defined if descriptor passing is supported */
+#cmakedefine USE_DESCRIPTOR_PASSING @USE_DESCRIPTOR_PASSING@
+
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# define _ALL_SOURCE 1
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE 1
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+
+
+/* Version number of package */
+#cmakedefine VERSION @VERSION@
+
+/* Expose all libc features (__DARWIN_C_FULL) */
+#cmakedefine _DARWIN_C_SOURCE @_DARWIN_C_SOURCE@
+
+/* Define to 1 if on MINIX. */
+#cmakedefine _MINIX @_MINIX@
+
+/* Define to 2 if the system does not provide POSIX.1 features except with
+   this defined. */
+#cmakedefine _POSIX_1_SOURCE @_POSIX_1_SOURCE@
+
+/* Define to 1 if you need to in order for `stat' and other things to work. */
+#cmakedefine _POSIX_SOURCE @_POSIX_SOURCE@
+
+/* Activate extensions on Solaris */
+#cmakedefine _XOPEN_SOURCE @_XOPEN_SOURCE@
+
+/* Activate extensions on Solaris */
+#cmakedefine _XOPEN_SOURCE_EXTENDED @_XOPEN_SOURCE_EXTENDED@
+
+/* Activate extensions on Solaris */
+#cmakedefine __EXTENSIONS__ @__EXTENSIONS__@
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#cmakedefine const @const@
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#cmakedefine inline @inline@
+#endif
+
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#cmakedefine size_t @size_t@
+
+/* type to use in place of socklen_t if not defined */
+#cmakedefine socklen_t @socklen_t@
+
+/* Define to the type of an unsigned integer type of width exactly 16 bits if
+   such a type exists and the standard includes do not define it. */
+#cmakedefine uint16_t @uint16_t@
+
+/* Define to the type of an unsigned integer type wide enough to hold a
+   pointer, if such a type exists, and if the system does not define it. */
+#cmakedefine uintptr_t @uintptr_t@
+
+#if _WIN32
+# define HAVE_ENVIRON_DECL
+# define putc_unlocked _putc_nolock
+#endif
+
+#endif /*_ASSUAN_CONFIG_H_INCLUDED*/
+
