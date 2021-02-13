@@ -396,7 +396,8 @@ static struct {
 
   { "INPUT",  std_handler_input, std_help_input, 0 },
   { "OUTPUT", std_handler_output, std_help_output, 0 },
-  { } };
+  { NULL, NULL, NULL, 0}
+  };
 
 
 /**
