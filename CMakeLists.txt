@@ -21,12 +21,12 @@ set(PACKAGE_TARNAME \"${PROJECT_NAME}\")
 set(PACKAGE_URL \"\")
 set(PACKAGE_VERSION \"${PROJECT_VERSION}\")
 set(VERSION \"${PROJECT_VERSION}\")
-set(VERSION_HEX 0x020504) #0x%02x%02x%20 -> 0x'major''minor''patch'
+math(EXPR VERSION_HEX "(${PROJECT_VERSION_MAJOR} << 16) + (${PROJECT_VERSION_MINOR} << 8) + ${PROJECT_VERSION_PATCH}" OUTPUT_FORMAT HEXADECIMAL)
 
 #find_package(GPGRT REQUIRED)
 include(UtilityFunctions)
-include(CheckCSourceCompiles)
-include(CheckStructHasMember)
+
+include(SignalHandler)
 include(inline)
 
 set(BUILD_REVISION \"\")
@@ -53,10 +53,8 @@ check_functions(inet_pton flockfile fopencookie funlockfile funopen getaddrinfo
 getpeereid getpeerucred getrlimit isascii memrchr nanosleep putc_unlocked setenv stat stpcpy)
 unset(CMAKE_REQUIRED_LIBRARIES)
 
-check_struct_has_member("struct cmsghdr" cmsg_len
-	"stdlib.h;stddef.h;sys/socket.h;sys/types.h;sys/un.h" USE_DESCRIPTOR_PASSING)
-
-check_struct_has_member("struct sockpeercred" pid "sys/socket.h;sys/types.h" HAVE_STRUCT_SOCKPEERCRED_PID)
+check_struct("struct cmsghdr" "cmsg_len" "stdlib.h;stddef.h;sys/socket.h;sys/types.h;sys/un.h" USE_DESCRIPTOR_PASSING)
+check_struct("struct sockpeercred" "pid" "sys/socket.h;sys/types.h" HAVE_STRUCT_SOCKPEERCRED_PID)
 
 if(WIN32)
 	set(CMAKE_EXTRA_INCLUDE_FILES winsock2.h ws2tcpip.h)
@@ -76,24 +74,6 @@ endif()
 
 if(NOT HAVE_UINT16_T)
 	set(uint16_t "unsigned\ short")
-endif()
-
-check_c_source_compiles("
-#include <sys/types.h>
-#include <signal.h>
-
-int
-main ()
-{
-return *(signal (0, 0)) (0) == 1;
-  ;
-  return 0;
-}"
-RETSIGTYPE)
-if(RETSIGTYPE)
-	set(RETSIGTYPE int)
-else()
-	set(RETSIGTYPE void)
 endif()
 
 configure_file(libassuan-config.h.in config.h)
